@@ -1,6 +1,6 @@
 <div align="center">
 
-# Club Management System
+# Club Events Management System
 
 A club management system that allows students who are part of clubs to easily manage their budget, set up events and communicate with other team members.
 
