@@ -53,3 +53,37 @@ The system shall keep a record of all submitted budget requests for a club, incl
 
 The system shall provide a summary view showing the club's total budget, amount already allocated to approved events, and remaining balance, accessible to the Treasurer and President.
 
+
+
+## Haziq Khalid - Event Creation, Cancellation, and Approval
+
+
+
+11\. Create Event Proposal:
+
+The system shall allow the club President or Vice President to create an event proposal with a title, description, date, start and end time, location, and expected number of attendees. The proposal is marked as either an on-campus event, where the room is picked from a list of university rooms, or an off-campus trip. On-campus events are sent to the faculty member in charge of allocating rooms in that building and off-campus trips are sent to the club's faculty advisor. A submitted proposal gets the status "Pending".
+
+
+
+12\. Location Clash Check:
+
+When an on-campus event proposal is submitted, the system shall check it against all approved events and warn the booker if one is booked in the same room at an overlapping time, showing that event's name and time. The booker can change the details or submit anyway. If they submit anyway, the clash warning is shown to the faculty member in charge of allocating rooms on the proposal.
+
+
+
+13\. Approve or Reject Event Proposal:
+
+The system shall allow a faculty member to approve or reject the pending proposals sent to them, which are room bookings for the building they are in charge of, or trips from the clubs they advise. A rejection cannot be saved without a written reason, and that reason is shown to the club's members on the event page. When a faculty advisor approves a trip, the system lists them on the event as the faculty member going with the students.
+
+
+
+14\. Request Changes to Event Proposal:
+
+The system shall allow the faculty member to send a pending proposal back to the club with comments, which sets its status to "Changes Requested". The President or Vice President can then edit the proposal and resubmit it, which sets it back to "Pending". The faculty member's earlier comments stay visible on the proposal.
+
+
+
+15\. Cancel Event:
+
+The system shall allow the club President or Vice President to cancel a pending or approved event any time before it starts, after entering a cancellation reason. Cancelled events stay in the club's event list with the status "Cancelled" and are not deleted unless manually deleted.
+

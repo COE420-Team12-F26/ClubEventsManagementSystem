@@ -64,3 +64,47 @@ Actor: Treasurer
 
 Description: The Treasurer receives a notification when a submitted budget request has been approved, rejected, or returned with comments by the President.
 
+
+
+## Haziq Khalid - Event Creation, Cancellation, and Approval
+
+
+
+11\. Create Event Proposal
+
+Actor: President / Vice President
+
+Description: The member fills in the event form (title, description, date, time, location, expected attendees), picks whether it's on campus or an off-campus trip, and submits it. For on-campus events, the system checks for room clashes and sends the proposal to the faculty member in charge of that building. Off-campus trips go to the club's faculty advisor. Either way, the status is set to "Pending".
+
+
+
+12\. Review Event Proposal
+
+Actor: Faculty Member
+
+Description: The faculty member opens the list of pending proposals sent to them, which are room bookings for the building they are in charge of, or trips from the clubs they advise. They pick one, read the details and any clash warning, and approve or reject it. A rejection needs a written reason.
+
+
+
+13\. Request Changes to Event Proposal
+
+Actor: Faculty Member
+
+Description: While reviewing a proposal, the faculty member decides it needs fixing rather than a straight approval or rejection, and sends it back to the club with comments on what to change, like asking for a bigger room or a different trip date.
+
+
+
+14\. Revise Returned Event Proposal
+
+Actor: President / Vice President
+
+Description: The member opens a proposal marked "Changes Requested", reads the faculty's comments, updates the details, and submits it again for review.
+
+
+
+15\. Cancel Event
+
+Actor: President / Vice President
+
+Description: The member picks an upcoming pending or approved event, clicks Cancel, enters a reason, and confirms. The event is marked "Cancelled" and stays in the club's event list.
+
