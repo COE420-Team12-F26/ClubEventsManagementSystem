@@ -1,3 +1,5 @@
+Ahmed Abdelmohsen Accounts, Roles, Notifications, and Dashboard
+
 1\. Security:  
 The system shall protect user accounts and club information through secure authentication and role-based access control. Users shall only be able to access features permitted for their assigned role.
 

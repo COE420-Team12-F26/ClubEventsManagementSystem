@@ -1,3 +1,5 @@
+Ahmed Abdelmohsen-Accounts, Roles, Notifications, and Dashboard
+
 1\. User Login:  
 The system shall allow registered club members to securely log in using their AUS email/username and password.
 
