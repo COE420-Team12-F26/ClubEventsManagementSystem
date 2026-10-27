@@ -46,6 +46,6 @@ Both entities appear in the Context Diagram and in the Level-0 DFD.
 - [x] The Level-0 DFD uses the same external entities.
 - [x] The Context Diagram and Level-0 DFD are balanced (see table above).
 - [x] The Level-0 DFD has 6 processes (1.0-6.0).
-- [x] The Level-0 DFD has 5 data stores: D1 User Accounts & Roles, D2 Event Proposals, D3 Budget Requests & History, D4 Club Budget, D5 Notifications.
+- [x] The Level-0 DFD has 5 data stores: D1 User Accounts & Roles, D2 Event Proposals (including the room and building reference data used by the clash check and approver routing), D3 Budget Requests & History, D4 Club Budget, D5 Notifications.
 - [x] The Core Processes Matrix contains the same processes (P1-P6 = 1.0-6.0).
 - [x] DFD processes are consistent with the Functional Requirements and Use Cases.

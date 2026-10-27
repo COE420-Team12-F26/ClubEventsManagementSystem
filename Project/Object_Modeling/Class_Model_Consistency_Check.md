@@ -26,7 +26,7 @@ Diagram: [Consolidated Class Diagram](Class_Diagram/Consolidated_Class_Diagram.p
 
 | Use Case | Actor(s) | Classes |
 |---|---|---|
-| UC1 Log In | Club roles (and Faculty Member, see Findings) | `UserAccount`, `ClubMember`, `FacultyMember`, `ClubRole` |
+| UC1 Log In | Club roles, Faculty Member | `UserAccount`, `ClubMember`, `FacultyMember`, `ClubRole` |
 | UC2 View Dashboard | President / VP / Executive / Treasurer | `ClubMember`, `DashboardSummary`, `Event`, `BudgetRequest`, `ClubBudget`, `Notification` |
 | UC3 View Notifications | President / VP / Executive / Treasurer | `UserAccount.listNotifications()`, `Notification` |
 | UC4 View Role-Based Features | President / VP / Executive / Treasurer | `ClubRole` hierarchy, `ClubMember.hasAccess()` |
@@ -49,7 +49,7 @@ Every use case maps to at least one class, and every class supports at least one
 | Data Store | Classes | Notes |
 |---|---|---|
 | D1 User Accounts & Roles | `UserAccount`, `ClubMember`, `FacultyMember`, `ClubRole` (+4 subclasses), `Club` | Club membership is stored with the accounts. |
-| D2 Event Proposals | `Event`, `OnCampusEvent`, `OffCampusTrip`, `ClashCheck`, `EventReview`, `Room`, `Building` | `Room` and `Building` are reference data read by P2 and P3 (see Findings). |
+| D2 Event Proposals | `Event`, `OnCampusEvent`, `OffCampusTrip`, `ClashCheck`, `EventReview`, `Room`, `Building` | `Room` and `Building` are the room and building reference data held in D2 and read by P2 and P3. |
 | D3 Budget Requests & History | `BudgetRequest`, `CostBreakdownItem`, `BudgetDecisionRecord` | |
 | D4 Club Budget | `ClubBudget` | |
 | D5 Notifications | `Notification` | |
@@ -116,13 +116,6 @@ Every association has a name, a reading direction and multiplicities at both end
 | Event *(abstract)* | OnCampusEvent, OffCampusTrip | Same lifecycle; different location data and reviewer (FR11). |
 | DecisionRecord *(abstract)* | EventReview, BudgetDecisionRecord | Same audit data and outcomes; different subject and decider (FR7, FR13, NFR7). |
 
-## Findings from Earlier Labs
-
-| # | Finding | Affected Artifact | Recommendation |
-|---|---|---|---|
-| F1 | Faculty Member is not linked to UC-01 Log In, but the Level-0 DFD shows faculty sending login credentials to P1, and UC12/UC13 need a logged-in faculty member. | [UML_Use_Case_Diagram.png](../Requirements/UML_Use_Case_Diagram.png), UC1 in [Use_Cases.md](../Requirements/Use_Cases.md) | Add Faculty Member as an actor of UC1. |
-| F2 | The DFD has no data store for rooms and buildings, which the clash check and routing (FR11, FR12) need. | [Level-0 DFD](../Data_Flow_Modeling/Level_0_DFD/Level_0_DFD.png) | Treat them as reference data inside D2 (as done here), or add a store if the DFD is revised. |
-
 ## Checklist
 
 - [x] Every approved class traces to at least one use case and one requirement.
@@ -134,4 +127,3 @@ Every association has a name, a reading direction and multiplicities at both end
 - [x] All associations are named and have multiplicities at both ends.
 - [x] Generalizations represent genuine "is-a" relationships.
 - [x] UML notes document the main constraints (role assignment, event lifecycle, budget rules, immutable decisions).
-- [ ] Earlier-lab findings F1 and F2 are still open for the team to decide.

@@ -49,4 +49,4 @@ Diagram: [Consolidated Class Diagram](Class_Diagram/Consolidated_Class_Diagram.p
 
 - **One club per member account.** `ClubMember 1..* — 1 Club` assumes a member account belongs to one club. If students in several clubs must be supported, a `Membership` association class (club + role) should replace the direct link.
 - **Executive responsibilities.** FR2 says Executives work on events "depending on their assigned responsibilities". The model only has `ExecutiveRole.canViewAssignedEvents()`. An assignment between `ClubMember` and `Event` can be added if the team specifies it.
-- **Use case diagram.** Faculty Member is not connected to UC-01 Log In, although the DFD and this model have faculty log in (see the consistency check). The Lab 3 diagram should be updated.
+- **Earlier-lab updates.** Faculty Member was added as an actor of UC-01 Log In (use case diagram and Use_Cases.md), matching the Level-0 DFD. Rooms and buildings are recorded as reference data in D2 Event Proposals in the DFD consistency check and Core Processes Matrix.

@@ -2,8 +2,8 @@ Ahmed Abdelmohsen Accounts, Roles, Notifications, and Dashboard
 
 
 1.Log In  
-Actor: President / Vice President / Executive / Treasurer  
-Description: The club member enters their login credentials. The system verifies the account, identifies the user's club role, and gives access to the appropriate features.
+Actor: President / Vice President / Executive / Treasurer / Faculty Member  
+Description: The club member or faculty member enters their login credentials. The system verifies the account, identifies the user's club role or faculty access, and gives access to the appropriate features.
 
 2\. View Dashboard  
 Actor: President / Vice President / Executive / Treasurer  
