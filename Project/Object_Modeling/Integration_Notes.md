@@ -8,7 +8,7 @@ Diagram: [Consolidated Class Diagram](Class_Diagram/Consolidated_Class_Diagram.p
 |---|---|---|
 | Accounts, Roles, Notifications & Dashboard | Ahmed Abdelmohsen | Ahmed class inventory and UML diagram |
 | Budget Requests | Abdelrahman Ahmed Elsayed | [Abdelrahman_Class_Inventory.md](Individual_Models/Abdelrahman_Class_Inventory.md), [Abdelrahman_Class_Diagram.drawio](Individual_Models/Abdelrahman_Class_Diagram.drawio) |
-| Event Creation, Cancellation & Approval | Haziq Mohammad Khalid | Haziq class inventory and UML diagram |
+| Event Creation, Cancellation & Approval | Haziq Mohammad Khalid | [Haziq_Class_Inventory.md](Individual_Models/Haziq_Class_Inventory.md), [Haziq_Class_Diagram.drawio](Individual_Models/Haziq_Class_Diagram.drawio) |
 
 ## Integration Steps
 
