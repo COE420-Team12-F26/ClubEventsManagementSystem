@@ -1,0 +1,227 @@
+<mxfile host="app.diagrams.net" modified="2026-11-01T00:00:00.000Z" agent="Claude" version="24.0.0" type="device">
+  <diagram name="UC11 Create Event Proposal (On-Campus)" id="UC11_Create_Event_Proposal_(On-Campus)">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1340" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+<mxCell id="s1" value="«actor»&lt;br/&gt;&lt;b&gt;President / VP&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="80" y="70" width="150" height="1260" as="geometry" />
+</mxCell>
+<mxCell id="s2" value="&lt;b&gt;:OnCampusEvent&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="270" y="70" width="170" height="1260" as="geometry" />
+</mxCell>
+<mxCell id="s3" value="&lt;b&gt;:ClashCheck&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="460" y="70" width="150" height="1260" as="geometry" />
+</mxCell>
+<mxCell id="s4" value="&lt;b&gt;:Room&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="650" y="70" width="130" height="1260" as="geometry" />
+</mxCell>
+<mxCell id="s5" value="&lt;b&gt;:Building&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="840" y="70" width="140" height="1260" as="geometry" />
+</mxCell>
+<mxCell id="s6" value="&lt;b&gt;:Notification&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="1030" y="70" width="160" height="1260" as="geometry" />
+</mxCell>
+<mxCell id="s7" value="sd  UC11 – Create Event Proposal (On-Campus)" style="text;html=1;fontStyle=1;fontSize=14;align=left;" vertex="1" parent="1">
+  <mxGeometry x="60" y="15" width="400" height="24" as="geometry" />
+</mxCell>
+<mxCell id="s8" value="«create» OnCampusEvent(title, description, eventDate, startTime, endTime, expectedAttendees, room)" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="155.0" y="110" as="sourcePoint" />
+    <mxPoint x="355.0" y="110" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s9" value="" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+  <mxGeometry x="350.0" y="110" width="10" height="790" as="geometry" />
+</mxCell>
+<mxCell id="s10" value="validate() : List&lt;String&gt;" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="155.0" y="160" as="sourcePoint" />
+    <mxPoint x="355.0" y="160" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s11" value="errors" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="188" as="sourcePoint" />
+    <mxPoint x="155.0" y="188" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s12" value="submit()" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="155.0" y="253" as="sourcePoint" />
+    <mxPoint x="355.0" y="253" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s13" value="runClashCheck()" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="360.0" y="281" as="sourcePoint" />
+    <mxPoint x="360.0" y="309" as="targetPoint" />
+    <Array as="points"><mxPoint x="410.0" y="281" /><mxPoint x="410.0" y="309" /></Array>
+  </mxGeometry>
+</mxCell>
+<mxCell id="s15" value="«create» ClashCheck()" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="321" as="sourcePoint" />
+    <mxPoint x="535.0" y="321" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s16" value="" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+  <mxGeometry x="530.0" y="321" width="10" height="199" as="geometry" />
+</mxCell>
+<mxCell id="s17" value="getApprovedEvents(eventDate) : List&lt;OnCampusEvent&gt;" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="535.0" y="359" as="sourcePoint" />
+    <mxPoint x="715.0" y="359" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s18" value="" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+  <mxGeometry x="710.0" y="359" width="10" height="40" as="geometry" />
+</mxCell>
+<mxCell id="s19" value="approvedEvents" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="715.0" y="387" as="sourcePoint" />
+    <mxPoint x="535.0" y="387" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s20" value="overlaps(approvedEvent) : boolean" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="535.0" y="449" as="sourcePoint" />
+    <mxPoint x="355.0" y="449" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s21" value="boolean" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="477" as="sourcePoint" />
+    <mxPoint x="535.0" y="477" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s22" value="loop  [* for each approvedEvent in approvedEvents]" style="shape=umlFrame;whiteSpace=wrap;html=1;width=70;height=30;align=left;verticalAlign=top;fontSize=11;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+  <mxGeometry x="460.0" y="407" width="-30.0" height="94" as="geometry" />
+</mxCell>
+<mxCell id="s23" value="run() : boolean  (sets hasClash)" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="540.0" y="521" as="sourcePoint" />
+    <mxPoint x="540.0" y="549" as="targetPoint" />
+    <Array as="points"><mxPoint x="590.0" y="521" /><mxPoint x="590.0" y="549" /></Array>
+  </mxGeometry>
+</mxCell>
+<mxCell id="s25" value="clashCheck" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="535.0" y="561" as="sourcePoint" />
+    <mxPoint x="355.0" y="561" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s26" value="getRoomAllocator() : FacultyMember" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="633" as="sourcePoint" />
+    <mxPoint x="910.0" y="633" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s27" value="" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+  <mxGeometry x="905.0" y="633" width="10" height="40" as="geometry" />
+</mxCell>
+<mxCell id="s28" value="approver" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="910.0" y="661" as="sourcePoint" />
+    <mxPoint x="355.0" y="661" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s29" value="updateStatus(PENDING, expectedVersion)" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="360.0" y="689" as="sourcePoint" />
+    <mxPoint x="360.0" y="717" as="targetPoint" />
+    <Array as="points"><mxPoint x="410.0" y="689" /><mxPoint x="410.0" y="717" /></Array>
+  </mxGeometry>
+</mxCell>
+<mxCell id="s31" value="«create» createForEvent(approver, this, &quot;New proposal pending review&quot;)" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="729" as="sourcePoint" />
+    <mxPoint x="1110.0" y="729" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s32" value="" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+  <mxGeometry x="1105.0" y="729" width="10" height="30" as="geometry" />
+</mxCell>
+<mxCell id="s33" value="warning = clashCheck.getWarningMessage()" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="809" as="sourcePoint" />
+    <mxPoint x="155.0" y="809" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s34" value="overrideAndSubmit()" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="155.0" y="837" as="sourcePoint" />
+    <mxPoint x="535.0" y="837" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s35" value="updateStatus(PENDING, expectedVersion)" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="535.0" y="865" as="sourcePoint" />
+    <mxPoint x="355.0" y="865" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s36" value="getRoomAllocator() : FacultyMember" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="893" as="sourcePoint" />
+    <mxPoint x="910.0" y="893" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s37" value="approver" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="910.0" y="921" as="sourcePoint" />
+    <mxPoint x="355.0" y="921" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s38" value="«create» createForEvent(approver, this, &quot;Pending review (clash flagged)&quot;)" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="949" as="sourcePoint" />
+    <mxPoint x="1110.0" y="949" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s39" value="alt  [!clashCheck.hasClash()]" style="shape=umlFrame;whiteSpace=wrap;html=1;width=70;height=30;align=left;verticalAlign=top;fontSize=11;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+  <mxGeometry x="280.0" y="591" width="905.0" height="392" as="geometry" />
+</mxCell>
+<mxCell id="s40" value="" style="html=1;endArrow=none;dashed=1;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="280.0" y="779" as="sourcePoint" />
+    <mxPoint x="1185.0" y="779" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s41" value="[clashCheck.hasClash() — booker chose to submit anyway]" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontStyle=2;" vertex="1" parent="1">
+  <mxGeometry x="286.0" y="781" width="220" height="20" as="geometry" />
+</mxCell>
+<mxCell id="s42" value="event (status = PENDING)" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="1013" as="sourcePoint" />
+    <mxPoint x="155.0" y="1013" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s43" value="errors  (proposal rejected client-side, not submitted)" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="1093" as="sourcePoint" />
+    <mxPoint x="155.0" y="1093" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s44" value="alt  [errors.isEmpty()]" style="shape=umlFrame;whiteSpace=wrap;html=1;width=70;height=30;align=left;verticalAlign=top;fontSize=11;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+  <mxGeometry x="80.0" y="208" width="1105.0" height="915" as="geometry" />
+</mxCell>
+<mxCell id="s45" value="" style="html=1;endArrow=none;dashed=1;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="80.0" y="1063" as="sourcePoint" />
+    <mxPoint x="1185.0" y="1063" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s46" value="[!errors.isEmpty()]" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontStyle=2;" vertex="1" parent="1">
+  <mxGeometry x="86.0" y="1065" width="220" height="20" as="geometry" />
+</mxCell>
+<mxCell id="s47" value="Off-campus trips follow the same flow but call
+OffCampusTrip.setDestination() instead of
+assigning a Room, and route to the club&#x27;s
+FacultyMember advisor instead of a Building&#x27;s
+room allocator (FR11)." style="shape=note;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;size=12;fontSize=10;align=left;" vertex="1" parent="1">
+  <mxGeometry x="70.0" y="1143" width="320" height="50" as="geometry" />
+</mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

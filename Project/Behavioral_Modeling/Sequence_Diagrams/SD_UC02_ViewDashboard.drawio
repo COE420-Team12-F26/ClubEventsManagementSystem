@@ -1,0 +1,131 @@
+<mxfile host="app.diagrams.net" modified="2026-11-01T00:00:00.000Z" agent="Claude" version="24.0.0" type="device">
+  <diagram name="UC02 View Dashboard" id="UC02_View_Dashboard">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1030" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+<mxCell id="s1" value="«actor»&lt;br/&gt;&lt;b&gt;Club Member&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="80" y="70" width="150" height="950" as="geometry" />
+</mxCell>
+<mxCell id="s2" value="&lt;b&gt;:ClubMember&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="270" y="70" width="160" height="950" as="geometry" />
+</mxCell>
+<mxCell id="s3" value="&lt;b&gt;:Event&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="460" y="70" width="140" height="950" as="geometry" />
+</mxCell>
+<mxCell id="s4" value="&lt;b&gt;:ClubBudget&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="650" y="70" width="150" height="950" as="geometry" />
+</mxCell>
+<mxCell id="s5" value="&lt;b&gt;:Notification&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="840" y="70" width="160" height="950" as="geometry" />
+</mxCell>
+<mxCell id="s6" value="&lt;b&gt;:DashboardSummary&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="1030" y="70" width="190" height="950" as="geometry" />
+</mxCell>
+<mxCell id="s7" value="sd  UC02 – View Dashboard" style="text;html=1;fontStyle=1;fontSize=14;align=left;" vertex="1" parent="1">
+  <mxGeometry x="60" y="15" width="400" height="24" as="geometry" />
+</mxCell>
+<mxCell id="s8" value="Any ClubMember (incl. role subclasses) can request
+their dashboard; events/budgetRequests/notifications
+are the member&#x27;s own collections, already loaded." style="shape=note;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;size=12;fontSize=10;align=left;" vertex="1" parent="1">
+  <mxGeometry x="70.0" y="95" width="320" height="50" as="geometry" />
+</mxCell>
+<mxCell id="s9" value="generateDashboard(events, budgets, notes) : DashboardSummary" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="155.0" y="160" as="sourcePoint" />
+    <mxPoint x="350.0" y="160" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s10" value="getStatus() : EventStatus" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="350.0" y="242" as="sourcePoint" />
+    <mxPoint x="530.0" y="242" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s11" value="" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+  <mxGeometry x="525.0" y="242" width="10" height="30" as="geometry" />
+</mxCell>
+<mxCell id="s12" value="status" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="530.0" y="270" as="sourcePoint" />
+    <mxPoint x="350.0" y="270" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s13" value="add event to upcomingEvents" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="328" as="sourcePoint" />
+    <mxPoint x="355.0" y="356" as="targetPoint" />
+    <Array as="points"><mxPoint x="405.0" y="328" /><mxPoint x="405.0" y="356" /></Array>
+  </mxGeometry>
+</mxCell>
+<mxCell id="s15" value="opt  [status == APPROVED || status == PENDING]" style="shape=umlFrame;whiteSpace=wrap;html=1;width=70;height=30;align=left;verticalAlign=top;fontSize=11;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+  <mxGeometry x="275.0" y="290" width="150.0" height="76" as="geometry" />
+</mxCell>
+<mxCell id="s16" value="loop  [* for each event in events]" style="shape=umlFrame;whiteSpace=wrap;html=1;width=70;height=30;align=left;verticalAlign=top;fontSize=11;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+  <mxGeometry x="275.0" y="200" width="330.0" height="186" as="geometry" />
+</mxCell>
+<mxCell id="s17" value="getRemainingBalance() : Decimal" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="350.0" y="416" as="sourcePoint" />
+    <mxPoint x="725.0" y="416" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s18" value="" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+  <mxGeometry x="720.0" y="416" width="10" height="30" as="geometry" />
+</mxCell>
+<mxCell id="s19" value="remainingBalance" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="725.0" y="444" as="sourcePoint" />
+    <mxPoint x="350.0" y="444" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s20" value="isUnread() : boolean" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="350.0" y="516" as="sourcePoint" />
+    <mxPoint x="920.0" y="516" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s21" value="" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+  <mxGeometry x="915.0" y="516" width="10" height="30" as="geometry" />
+</mxCell>
+<mxCell id="s22" value="boolean" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="920.0" y="544" as="sourcePoint" />
+    <mxPoint x="350.0" y="544" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s23" value="add to recentNotifications" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="602" as="sourcePoint" />
+    <mxPoint x="355.0" y="630" as="targetPoint" />
+    <Array as="points"><mxPoint x="405.0" y="602" /><mxPoint x="405.0" y="630" /></Array>
+  </mxGeometry>
+</mxCell>
+<mxCell id="s25" value="opt  [isUnread]" style="shape=umlFrame;whiteSpace=wrap;html=1;width=70;height=30;align=left;verticalAlign=top;fontSize=11;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+  <mxGeometry x="275.0" y="564" width="150.0" height="76" as="geometry" />
+</mxCell>
+<mxCell id="s26" value="loop  [* for each notification in notifications]" style="shape=umlFrame;whiteSpace=wrap;html=1;width=70;height=30;align=left;verticalAlign=top;fontSize=11;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+  <mxGeometry x="275.0" y="474" width="720.0" height="186" as="geometry" />
+</mxCell>
+<mxCell id="s27" value="«create» DashboardSummary(upcomingEvents, budgetRequests, remainingBudget, recentNotifications)" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="350.0" y="690" as="sourcePoint" />
+    <mxPoint x="1125.0" y="690" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s28" value="" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+  <mxGeometry x="1120.0" y="690" width="10" height="30" as="geometry" />
+</mxCell>
+<mxCell id="s29" value="" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+  <mxGeometry x="345.0" y="160" width="10" height="570" as="geometry" />
+</mxCell>
+<mxCell id="s30" value="dashboard" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="350.0" y="740" as="sourcePoint" />
+    <mxPoint x="155.0" y="740" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

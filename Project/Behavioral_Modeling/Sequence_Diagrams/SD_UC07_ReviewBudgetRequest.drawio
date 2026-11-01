@@ -1,0 +1,208 @@
+<mxfile host="app.diagrams.net" modified="2026-11-01T00:00:00.000Z" agent="Claude" version="24.0.0" type="device">
+  <diagram name="UC07 Review Budget Request" id="UC07_Review_Budget_Request">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1180" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+<mxCell id="s1" value="«actor»&lt;br/&gt;&lt;b&gt;President&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="80" y="70" width="140" height="1100" as="geometry" />
+</mxCell>
+<mxCell id="s2" value="&lt;b&gt;:BudgetRequest&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="270" y="70" width="170" height="1100" as="geometry" />
+</mxCell>
+<mxCell id="s3" value="&lt;b&gt;:ClubBudget&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="460" y="70" width="150" height="1100" as="geometry" />
+</mxCell>
+<mxCell id="s4" value="&lt;b&gt;:BudgetDecisionRecord&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="650" y="70" width="190" height="1100" as="geometry" />
+</mxCell>
+<mxCell id="s5" value="&lt;b&gt;:Notification&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+  <mxGeometry x="840" y="70" width="160" height="1100" as="geometry" />
+</mxCell>
+<mxCell id="s6" value="sd  UC07 – Review Budget Request" style="text;html=1;fontStyle=1;fontSize=14;align=left;" vertex="1" parent="1">
+  <mxGeometry x="60" y="15" width="400" height="24" as="geometry" />
+</mxCell>
+<mxCell id="s7" value="President reads BudgetRequest.requestedAmount and the
+linked CostBreakdownItem list in the UI before deciding
+(plain reads, not shown as messages)." style="shape=note;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;size=12;fontSize=10;align=left;" vertex="1" parent="1">
+  <mxGeometry x="65.0" y="95" width="300" height="50" as="geometry" />
+</mxCell>
+<mxCell id="s8" value="approve(president, comments) : BudgetDecisionRecord" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="150.0" y="215" as="sourcePoint" />
+    <mxPoint x="355.0" y="215" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s9" value="hasSufficientFunds(requestedAmount) : boolean" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="253" as="sourcePoint" />
+    <mxPoint x="535.0" y="253" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s10" value="sufficientFunds" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="535.0" y="281" as="sourcePoint" />
+    <mxPoint x="355.0" y="281" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s11" value="«create» BudgetDecisionRecord(APPROVED, comments, president, now)" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="347" as="sourcePoint" />
+    <mxPoint x="745.0" y="347" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s12" value="" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+  <mxGeometry x="740.0" y="347" width="10" height="34" as="geometry" />
+</mxCell>
+<mxCell id="s13" value="allocate(requestedAmount) : void" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="381" as="sourcePoint" />
+    <mxPoint x="535.0" y="381" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s14" value="/remainingBalance = totalBudget - allocatedAmount" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="540.0" y="409" as="sourcePoint" />
+    <mxPoint x="540.0" y="437" as="targetPoint" />
+    <Array as="points"><mxPoint x="590.0" y="409" /><mxPoint x="590.0" y="437" /></Array>
+  </mxGeometry>
+</mxCell>
+<mxCell id="s16" value="" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+  <mxGeometry x="530.0" y="253" width="10" height="194" as="geometry" />
+</mxCell>
+<mxCell id="s17" value="status = APPROVED" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="360.0" y="449" as="sourcePoint" />
+    <mxPoint x="360.0" y="477" as="targetPoint" />
+    <Array as="points"><mxPoint x="410.0" y="449" /><mxPoint x="410.0" y="477" /></Array>
+  </mxGeometry>
+</mxCell>
+<mxCell id="s19" value="«create» createForBudget(treasurer, this, &quot;Budget request approved&quot;)" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="489" as="sourcePoint" />
+    <mxPoint x="920.0" y="489" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s20" value="" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+  <mxGeometry x="915.0" y="489" width="10" height="30" as="geometry" />
+</mxCell>
+<mxCell id="s21" value="record" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="519" as="sourcePoint" />
+    <mxPoint x="150.0" y="519" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s22" value="error(&quot;Insufficient funds — cannot approve&quot;)" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="569" as="sourcePoint" />
+    <mxPoint x="150.0" y="569" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s23" value="" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+  <mxGeometry x="350.0" y="215" width="10" height="384" as="geometry" />
+</mxCell>
+<mxCell id="s24" value="alt  [sufficientFunds]" style="shape=umlFrame;whiteSpace=wrap;html=1;width=70;height=30;align=left;verticalAlign=top;fontSize=11;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+  <mxGeometry x="280.0" y="305" width="715.0" height="294" as="geometry" />
+</mxCell>
+<mxCell id="s25" value="" style="html=1;endArrow=none;dashed=1;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="280.0" y="539" as="sourcePoint" />
+    <mxPoint x="995.0" y="539" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s26" value="[!sufficientFunds]" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontStyle=2;" vertex="1" parent="1">
+  <mxGeometry x="286.0" y="541" width="220" height="20" as="geometry" />
+</mxCell>
+<mxCell id="s27" value="reject(president, reason) : BudgetDecisionRecord" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="150.0" y="664" as="sourcePoint" />
+    <mxPoint x="355.0" y="664" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s28" value="«create» BudgetDecisionRecord(REJECTED, reason, president, now)" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="698" as="sourcePoint" />
+    <mxPoint x="745.0" y="698" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s29" value="status = REJECTED" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="360.0" y="732" as="sourcePoint" />
+    <mxPoint x="360.0" y="760" as="targetPoint" />
+    <Array as="points"><mxPoint x="410.0" y="732" /><mxPoint x="410.0" y="760" /></Array>
+  </mxGeometry>
+</mxCell>
+<mxCell id="s31" value="«create» createForBudget(treasurer, this, &quot;Budget request rejected&quot;)" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="772" as="sourcePoint" />
+    <mxPoint x="920.0" y="772" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s32" value="record" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="802" as="sourcePoint" />
+    <mxPoint x="150.0" y="802" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s33" value="" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+  <mxGeometry x="350.0" y="664" width="10" height="168" as="geometry" />
+</mxCell>
+<mxCell id="s34" value="requestChanges(president, comments) : BudgetDecisionRecord" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="150.0" y="877" as="sourcePoint" />
+    <mxPoint x="355.0" y="877" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s35" value="«create» BudgetDecisionRecord(CHANGES_REQUESTED, comments, president, now)" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="911" as="sourcePoint" />
+    <mxPoint x="745.0" y="911" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s36" value="status = CHANGES_REQUESTED" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="360.0" y="945" as="sourcePoint" />
+    <mxPoint x="360.0" y="973" as="targetPoint" />
+    <Array as="points"><mxPoint x="410.0" y="945" /><mxPoint x="410.0" y="973" /></Array>
+  </mxGeometry>
+</mxCell>
+<mxCell id="s38" value="«create» createForBudget(treasurer, this, &quot;Changes requested&quot;)" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="985" as="sourcePoint" />
+    <mxPoint x="920.0" y="985" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s39" value="record" style="html=1;endArrow=open;endFill=0;dashed=1;elbow=vertical;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="355.0" y="1015" as="sourcePoint" />
+    <mxPoint x="150.0" y="1015" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s40" value="" style="html=1;whiteSpace=wrap;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+  <mxGeometry x="350.0" y="877" width="10" height="168" as="geometry" />
+</mxCell>
+<mxCell id="s41" value="alt  [decision = approve]" style="shape=umlFrame;whiteSpace=wrap;html=1;width=70;height=30;align=left;verticalAlign=top;fontSize=11;spacingLeft=4;spacingTop=2;" vertex="1" parent="1">
+  <mxGeometry x="75.0" y="170" width="920.0" height="875" as="geometry" />
+</mxCell>
+<mxCell id="s42" value="" style="html=1;endArrow=none;dashed=1;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="75.0" y="619" as="sourcePoint" />
+    <mxPoint x="995.0" y="619" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s43" value="[decision = reject]" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontStyle=2;" vertex="1" parent="1">
+  <mxGeometry x="81.0" y="621" width="220" height="20" as="geometry" />
+</mxCell>
+<mxCell id="s44" value="" style="html=1;endArrow=none;dashed=1;startArrow=none;" edge="1" parent="1">
+  <mxGeometry relative="1" as="geometry">
+    <mxPoint x="75.0" y="832" as="sourcePoint" />
+    <mxPoint x="995.0" y="832" as="targetPoint" />
+  </mxGeometry>
+</mxCell>
+<mxCell id="s45" value="[decision = request changes]" style="text;html=1;align=left;verticalAlign=top;fontSize=11;fontStyle=2;" vertex="1" parent="1">
+  <mxGeometry x="81.0" y="834" width="220" height="20" as="geometry" />
+</mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
