@@ -7,7 +7,7 @@
 <mxCell id="s1" value="«actor»&lt;br/&gt;&lt;b&gt;Club Member&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
   <mxGeometry x="80" y="70" width="150" height="950" as="geometry" />
 </mxCell>
-<mxCell id="s2" value="&lt;b&gt;:ClubMember&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
+<mxCell id="s2" value="&lt;b&gt;DashboardSummary&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
   <mxGeometry x="270" y="70" width="160" height="950" as="geometry" />
 </mxCell>
 <mxCell id="s3" value="&lt;b&gt;:Event&lt;/b&gt;" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;fillColor=#DAE8FC;strokeColor=#6C8EBF;" vertex="1" parent="1">
@@ -25,12 +25,12 @@
 <mxCell id="s7" value="sd  UC02 – View Dashboard" style="text;html=1;fontStyle=1;fontSize=14;align=left;" vertex="1" parent="1">
   <mxGeometry x="60" y="15" width="400" height="24" as="geometry" />
 </mxCell>
-<mxCell id="s8" value="Any ClubMember (incl. role subclasses) can request
-their dashboard; events/budgetRequests/notifications
-are the member&#x27;s own collections, already loaded." style="shape=note;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;size=12;fontSize=10;align=left;" vertex="1" parent="1">
+<mxCell id="s8" value="CO1 loads the member&#x27;s role, events, budget requests,
+club budget and notifications through the component
+interfaces, then calls static DashboardSummary.generate()." style="shape=note;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;size=12;fontSize=10;align=left;" vertex="1" parent="1">
   <mxGeometry x="70.0" y="95" width="320" height="50" as="geometry" />
 </mxCell>
-<mxCell id="s9" value="generateDashboard(events, budgets, notes) : DashboardSummary" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
+<mxCell id="s9" value="generate(role, events, budgets, budget, notes) : DashboardSummary" style="html=1;endArrow=block;endFill=1;dashed=0;elbow=vertical;startArrow=none;" edge="1" parent="1">
   <mxGeometry relative="1" as="geometry">
     <mxPoint x="155.0" y="160" as="sourcePoint" />
     <mxPoint x="350.0" y="160" as="targetPoint" />

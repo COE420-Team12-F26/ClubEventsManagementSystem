@@ -114,7 +114,7 @@ Each System action maps to an operation or attribute already in the consolidated
 | Get event status | `Event.getStatus()` |
 | Get remaining club budget balance | `ClubBudget.getRemainingBalance(): Decimal` |
 | Check whether notification is unread | `Notification.isUnread(): boolean` |
-| Load data / Create dashboard summary | `ClubMember.generateDashboard(events, budgets, notes): DashboardSummary` |
+| Load data / Create dashboard summary | `DashboardSummary.generate(role, events, budgets, budget, notes): DashboardSummary` |
 
 ### Lab 6 – Sequence Diagram Modeling
 - **Same use cases:** each Activity Diagram represents exactly the same use case as its Sequence Diagram (UC11 ↔ SD_UC11, UC07 ↔ SD_UC07, UC02 ↔ SD_UC02).

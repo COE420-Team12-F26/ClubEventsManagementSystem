@@ -17,7 +17,7 @@ The team model has **23 classes and 4 enumerations**. It merges the three indivi
 | Class ID | Class Name | Purpose/Responsibility | Related Use Case(s) | Origin |
 |---|---|---|---|---|
 | C01 | UserAccount *(abstract)* | Login account for anyone who uses the system. Stores AUS email, password hash and active status. Authenticates the user and lists their notifications. | UC1, UC3, UC4 | Ahmed C1 (made abstract) |
-| C02 | ClubMember | A student account in a club. Holds one club role at a time, can be given a new role, and builds the role-based dashboard. | UC1–UC11, UC14, UC15 | Ahmed C1 + ClubMember stubs (Abdelrahman C06, Haziq) |
+| C02 | ClubMember | A student account in a club. Holds one club role at a time and can be given a new role. | UC1–UC11, UC14, UC15 | Ahmed C1 + ClubMember stubs (Abdelrahman C06, Haziq) |
 | C03 | FacultyMember | A faculty account. Reviews event proposals as a building's room allocator or as a club's faculty advisor, and goes on approved trips. | UC1, UC12, UC13 | Haziq stub, promoted to a full class |
 | C04 | ClubRole *(abstract)* | Common permission set and permission checks shared by all club roles. | UC1, UC4, UC5 | Ahmed C2 |
 | C05 | PresidentRole | Manages roles and events, views the budget and decides on budget requests. | UC5, UC7, UC11, UC15 | Ahmed C3 + Abdelrahman President stub |
@@ -26,7 +26,7 @@ The team model has **23 classes and 4 enumerations**. It merges the three indivi
 | C08 | TreasurerRole | Views the budget and submits budget requests. | UC6, UC8, UC9, UC10 | Ahmed C6 + Abdelrahman Treasurer stub |
 | C09 | Club | A student club. Groups its members, events and budget, and names its faculty advisor. | UC2, UC6, UC8, UC11 | Haziq stub, promoted to a full class |
 | C10 | Notification | An alert sent to one account about an event or a budget request, with its read status. | UC3, UC10 | Ahmed C7 + Haziq Notification stub |
-| C11 | DashboardSummary *«derived view»* | The role-filtered dashboard content (upcoming events, budget requests, remaining budget, recent notifications). Built on demand and never stored. | UC2 | Ahmed (modeling note) |
+| C11 | DashboardSummary *«derived view»* | The role-filtered dashboard content (upcoming events, budget requests, remaining budget, recent notifications). Built on demand by its static `generate()` and never stored. | UC2 | Ahmed (modeling note) |
 
 ### Event Proposals (P2, P3 · D2)
 
@@ -101,4 +101,4 @@ The team model has **23 classes and 4 enumerations**. It merges the three indivi
 | D4 | `Club` added | It ties members, the faculty advisor, events and the club budget together (needed for NFR9 multi-club support). |
 | D5 | Common types | IDs are `String`, money is `Decimal`, and the primitives `boolean`/`void` and typed collections are used throughout. |
 
-All 20 changes, with the before/after state and the reason for each, are logged in [Integration_Notes.md](Integration_Notes.md).
+All 21 changes, with the before/after state and the reason for each, are logged in [Integration_Notes.md](Integration_Notes.md).
