@@ -33,7 +33,7 @@ Every message in all three diagrams was checked one-for-one against the operatio
 | `allocate(requestedAmount) : void` | `ClubBudget.allocate(amount): void` |
 | `/remainingBalance = totalBudget - allocatedAmount` | `ClubBudget./remainingBalance` (derived attribute) |
 | `createForBudget(...)` | `Notification.createForBudget(recipient, request, message): Notification` (static) |
-| `generateDashboard(events, budgets, notes) : DashboardSummary` | `ClubMember.generateDashboard(events, budgets, notes): DashboardSummary` |
+| `generate(role, events, budgets, budget, notes) : DashboardSummary` | `DashboardSummary.generate(role, events, budgets, budget, notes): DashboardSummary` (static; revised in Lab 8) |
 | `getStatus()` | `Event.getStatus()` |
 | `getRemainingBalance() : Decimal` | `ClubBudget.getRemainingBalance(): Decimal` |
 | `isUnread() : boolean` | `Notification.isUnread(): boolean` |
@@ -43,6 +43,6 @@ No new operations, attributes, or classes were introduced by the sequence diagra
 
 ## Check C — vs. the Overall System
 
-- **Naming consistency:** actor names (`President / VP`, `President`, `Club Member`), object names (`:OnCampusEvent`, `:ClashCheck`, `:Room`, `:Building`, `:BudgetRequest`, `:ClubBudget`, `:BudgetDecisionRecord`, `:Notification`, `:ClubMember`, `:Event`, `:DashboardSummary`), and enumeration literals (`PENDING`, `APPROVED`, `REJECTED`, `CHANGES_REQUESTED`) are identical across all three diagrams and match the Class Diagram exactly — no synonyms or renamed classes were introduced.
+- **Naming consistency:** actor names (`President / VP`, `President`, `Club Member`), object names (`:OnCampusEvent`, `:ClashCheck`, `:Room`, `:Building`, `:BudgetRequest`, `:ClubBudget`, `:BudgetDecisionRecord`, `:Notification`, `DashboardSummary` (class, static call), `:Event`, `:DashboardSummary`), and enumeration literals (`PENDING`, `APPROVED`, `REJECTED`, `CHANGES_REQUESTED`) are identical across all three diagrams and match the Class Diagram exactly — no synonyms or renamed classes were introduced.
 - **Cross-component coherence:** UC11 and UC07 both create a `Notification` through the same two static factory methods (`createForEvent` / `createForBudget`) already defined on the shared `Notification` class, and UC02 reads notifications created by either flow, confirming the three diagrams describe one consistent system rather than three isolated ones.
 - **No contradictions with team integration decisions:** the diagrams respect the Major Integration Decisions (D1–D5) recorded in `Integration_Notes.md` (e.g., `Notification` and `DashboardSummary` as shared/promoted classes, `ClubBudget./remainingBalance` as a derived attribute) and the associations/multiplicities verified in `Class_Model_Consistency_Check.md`.

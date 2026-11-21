@@ -1,0 +1,13 @@
+# Lab 8 – Architectural Design Goals
+
+[Style Selection](Architectural_Style_Selection.md) | [Component Descriptions](Component_Descriptions.md) | [Class Distribution](Class_Distribution.md) | [Component Diagram](Component_Diagram/Software_Architecture_Component_Diagram.pdf)
+
+The team identified five architectural design goals from the Lab 3 requirements. DG1 and DG2 (High) were the deciding goals when choosing the architectural style.
+
+| Goal ID | Design Goal | Description | Related Requirement | Priority | Justification |
+|---|---|---|---|---|---|
+| DG1 | Security | Every request is authenticated, and every action is checked against the user's club role or faculty responsibility on the server before any data is read or changed. | FR1 User Login, FR2 Role-Based Access, NFR1 Security, NFR12 Access Control | High | The system stores club budgets and decides who may approve events and money. NFR12 says requests sent straight to the server must still be refused, so checks cannot live only in the user interface. |
+| DG2 | Maintainability | Each functional area (accounts, events, budget, shared services) is kept in its own component behind interfaces, so a change in one area does not force changes in unrelated areas. | NFR10 Maintainability, FR7 Budget Approval Workflow | High | NFR10 asks that a new approval step or budget category can be added without major changes elsewhere. The three team members also own separate areas, so clear boundaries let them work in parallel. |
+| DG3 | Reliability | Account data, roles, events, budget decisions and notifications are saved correctly; decision records are never changed after they are written; two users acting on the same event cannot overwrite each other. | NFR4 Reliability, NFR6 Accuracy, NFR7 Auditability, NFR15 Data Integrity | High | Lost or silently overwritten approvals or allocations would make the club's budget wrong and the approval history untrustworthy. |
+| DG4 | Performance | The dashboard, account information and notifications load within 3 seconds, and submitting or deciding on a proposal (with the clash check) takes at most 2 seconds with 50 users online. | NFR2 Performance, NFR11 Response Time | Medium | Officers and faculty use the system close to event deadlines. The targets are modest for a web system of this size, so they guide the design without driving it. |
+| DG5 | Scalability | The architecture supports many clubs, each with its own members, events and budget, and dozens of events per semester, without a noticeable slowdown. | NFR9 Scalability, NFR8 Availability | Low | The system first serves AUS clubs only, but it must keep each club's data separate and handle growth across semesters. |

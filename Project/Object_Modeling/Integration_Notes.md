@@ -44,6 +44,7 @@ Diagram: [Consolidated Class Diagram](Class_Diagram/Consolidated_Class_Diagram.p
 | M18 | Dashboard | `generateDashboard(events: List, budgets: List, notes: List)` on `UserAccount`; `DashboardSummary` had no attributes. | Moved to `ClubMember` with typed lists. `DashboardSummary` lists the FR3 items. Dependency `ClubMember ⇢ «create» DashboardSummary`. | UC2 actors are the four club roles. Typed parameters and listed content make FR3 traceable. |
 | M19 | Types | IDs were `UUID` (Ahmed), `int` (Haziq) and `String` (Abdelrahman). Ahmed used `Boolean`, `Void`, `Set`, `List` and `DateTime?`. | IDs are `String` everywhere. Primitives are `boolean` and `void`, collections are `List<T>` / `Set<String>`, and the optional value is `DateTime [0..1]`. | One set of conventions across the whole model (Exercise 3: "Review attributes and methods for consistency"). |
 | M20 | Notation | Abdelrahman's preview PNG drew `composed of` with a filled triangle. | Drawn with a filled diamond at the `BudgetRequest` end. | His `.drawio` source already used a composition diamond; only the exported preview was wrong. |
+| M21 | Dashboard (Lab 8 revision) | `ClubMember.generateDashboard(events, budgets, notes)`, with a `«create»` dependency to `DashboardSummary`. | Static `DashboardSummary.generate(role, events, budgets, budget, notes)`; the dependency is removed. | In the Lab 8 layered architecture `DashboardSummary` sits in the presentation component, so the accounts component no longer calls the event and budget classes in the layer above. |
 
 ## Assumptions and Open Points
 

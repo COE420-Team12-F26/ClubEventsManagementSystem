@@ -8,7 +8,7 @@ Diagram: [Consolidated Class Diagram](Class_Diagram/Consolidated_Class_Diagram.p
 |---|---|---|
 | FR1 | User Login | `UserAccount.authenticate()`, `ClubMember`, `FacultyMember` |
 | FR2 | Role-Based Access | `ClubRole` + `PresidentRole`, `VicePresidentRole`, `ExecutiveRole`, `TreasurerRole`; `ClubMember.hasAccess()` |
-| FR3 | Personalized Dashboard | `ClubMember.generateDashboard()`, `DashboardSummary`, `Event`, `BudgetRequest`, `ClubBudget`, `Notification` |
+| FR3 | Personalized Dashboard | `DashboardSummary.generate()`, `Event`, `BudgetRequest`, `ClubBudget`, `Notification` |
 | FR4 | Notifications | `Notification`, `NotificationType`, `Notification.createForEvent()` / `createForBudget()` |
 | FR5 | Account and Role Management | `ClubMember.assignRole()`, `ClubMember.roleAssignedAt`, `PresidentRole.canManageRoles()` |
 | FR6 | Submit Budget Request | `BudgetRequest`, `CostBreakdownItem`, `TreasurerRole.canSubmitBudgetRequests()`, "submits", "requested for" `{event.status = APPROVED}` |
@@ -64,7 +64,7 @@ Every use case maps to at least one class, and every class supports at least one
 | P3 Review Event Proposals | `FacultyMember.getPendingProposals()`, `EventReview.save()`, `Event.updateStatus()` |
 | P4 Manage Budget Requests | `BudgetRequest.submit()`, `CostBreakdownItem` |
 | P5 Review Budget Requests & Update Club Budget | `BudgetRequest.approve()` / `reject()` / `requestChanges()`, `BudgetDecisionRecord`, `ClubBudget.hasSufficientFunds()` / `allocate()` |
-| P6 Generate Dashboard & Notifications | `ClubMember.generateDashboard()`, `DashboardSummary`, `Notification.createForEvent()` / `createForBudget()` |
+| P6 Generate Dashboard & Notifications | `DashboardSummary.generate()`, `Notification.createForEvent()` / `createForBudget()` |
 
 ## Non-Functional Requirements Reflected in the Structure
 
